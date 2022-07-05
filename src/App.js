@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import Table from "./Table";
+import Plus from "./plus";
+import Next from "./Next";
 
 function App() {
+  const [name, setName] = useState("amjad");
+
+  const onCardClick = () => {
+    console.log("hey dear");
+  };
+
+  useEffect(() => {
+    // setInterval(() => {
+    //   setName("amjad" + Math.random());
+    //   console.log(setName);
+    // }, 1000);
+
+    console.log("====================================");
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Table /> */}
+
+      {/* <Card name={"amjad"} onClick={onCardClick} /> */}
+      <Plus />
+
+      {/* <Next /> */}
     </div>
   );
 }
